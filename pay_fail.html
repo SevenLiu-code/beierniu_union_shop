@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>倍儿牛商城</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+   <style> 
+        /*css reset*/
+        html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+        html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+        html,body{font-family:sans-serif; -webkit-tap-highlight-color: transparent;
+            -webkit-font-smoothing: antialiased; }
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,
+        p,blockquote,tbody,tr,th,td,a,b,em,i,strong,html,article,aside, details, figcaption, figure, 
+        footer, header, menu, nav, section, select, option{margin:0;padding:0;}  /*内外边距为0*/
+        table{border-collapse:collapse; border-spacing:0;} /*表格合并边框*/
+        fieldset,img{border:0;}   /*将分组后的form元素边框，图片边框设置为无*/
+        address,caption,cite,code,dfn,em,th,var,i{font-style:normal; font-weight:normal;}
+        h1,h2,h3,h4,h5,h6 { font-weight: normal; }
+        th { font-weight: bold; }
+        button { border: 0; outline: 0; }
+        ol,ul{list-style:none;}
+        q:before,q:after{content:'';}
+        abbr,acronym{border:0; font-variant:normal;}/*不设置小型大写字母*/
+        sup{vertical-align:text-top;}
+        sub{vertical-align:text-bottom;}
+        input,textarea,select,a{font-family:inherit;font-size:inherit;font-weight:inherit;}
+        :focus{outline:0;}/*获取焦点时外边框为0*/
+        a{text-decoration:none;outline:none;}
+        textarea{resize:none;}
+        input[type=number],input[type=button]{-webkit-appearance:none}/*防止按钮在苹果手机上变色*/
+         input[type=text],input[type=tel],input[type=number],input[type=email],input[type=file]{
+         outline: none;
+         }
+        /*box-sizing*/
+        .box_s{ box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; }
+        /*word-break*/
+        .wbn{word-break:keep-all;white-space:nowrap;}
+        .wby{word-break:break-all;word-wrap:break-word;white-space:normal;}
+        /*fix*/
+        .clearfix:before, .clearfix:after{ display: table; content: ""; }
+        .clearfix:after { clear: both; }
+        .clearfix{ zoom: 1; }
+        /* 禁用iPhone中Safari的字号自动调整 */
+        html {-webkit-text-size-adjust: none;}
+        /* 设置HTML5元素为块 */
+        article,aside, details, figcaption, figure, footer, header, menu, nav, section { display:block; }
+        /*reset end*/
+   </style>
+   <style>
+        /*支付成功*/
+        section.pay_seccess, section.pay_fail { position: absolute; top: 0; bottom: 0;
+         left: 0; right: 0; padding-top: 1rem;
+         background-color: #fff; }
+        div.pay_seccess_icon>img { 
+            display: block; width: 4.5rem; height: 5.2rem; 
+            margin: 0 auto;
+        }
+        div.pay_fail_icon>img { 
+            display: block; width: 4.2rem; height: 4.2rem; 
+            margin: 0 auto;
+        }
+        p.pay_seccess_txt { margin-top: 0.5333rem; text-align: center;
+          font-size: 0.48rem; color: #333; } 
+   </style>
+    <script type="text/javascript">
+        !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+    </script>
+</head>
+<body>
+    <section class="pay_fail">
+        <div class="pay_fail_icon">
+            <img src="./images/icon/pay_x.png" alt="">
+        </div>
+        <p class="pay_seccess_txt">抱歉，付款失败</p>
+    </section>
+</body>
+</html>

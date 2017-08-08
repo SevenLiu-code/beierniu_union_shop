@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>倍儿牛商城</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="./css/m.reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/m.icomoom.css">
+    <link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/m.common.css">
+    <link rel="stylesheet" type="text/css" href="./css/m.details.css">
+    <link rel="stylesheet" type="text/css" href="./css/inoin_shop.css">
+    <link rel="stylesheet" type="text/css" href="./css/LArea.css">
+    <script type="text/javascript">
+        !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+    </script>
+    <script type="text/javascript" src="./js/zepto.min.js"></script>
+    <script type="text/javascript" src="./js/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="./js/m.runing.js"></script>
+    <script type="text/javascript" src="./js/m.touch.js"></script>
+</head>
+<body>
+    <!-- 商品详情头部 -->
+    <header class="common_head part_hidde">
+        <div class="head_content">
+            首页
+        </div>
+    </header>
+		<section class="my_information">
+				<div class="my_infor_inner">
+						<div class="my_infor_unit">
+								<div class="my_infor_item my_infor_used_car">
+									<div class="my_infor_item_inner">
+											<div class="my_infor_bg"></div>
+											<h2 class="my_infor_tit">二手车订单</h2>
+											<div class="icon_arrow_right"></div>
+									</div>
+									<!-- 二手车订单详情 -->
+									<div class="my_infor_details my_infor_used_car_details box_s">
+											<div class="my_infor_details_header common_head">
+													<a href="javascript:;" class="head_return icon-angle-left my_infor_details_return"></a>
+													<div class="head_content">二手车订单</div>
+											</div>
+											<ul class="my_infor_details_list">
+													<li class="my_infor_details_item">
+															<div class="my_infor_details_nub flex">订单编号：<span>38</span></div>
+															<div class="my_infor_details_content flex">
+																	<div class="my_infor_details_bg"></div>
+																	<div class="my_infor_order_details">
+																			<div class="order_head flex">
+																				<p class="order_name">买家：<span>张三</span></p>
+																				<div class="order_time">2017-8-6 14:30:26</div>
+																			</div>
+																			<p class="order_brand">求购品牌：<span>马自达cx-4</span></p>
+																			<p class="order_price">预算：<span>10-15万</span></p>
+																	</div>
+																	<!-- <div class="my_infor_details_icon"></div> -->
+															</div>
+													</li>
+													<li class="my_infor_details_item">
+															<div class="my_infor_details_nub flex">订单编号：<span>39</span></div>
+															<div class="my_infor_details_content flex">
+																	<div class="my_infor_details_bg"></div>
+																	<div class="my_infor_order_details">
+																			<div class="order_head flex">
+																				<p class="order_name">买家：<span>李四</span></p>
+																				<div class="order_time">2017-8-6 14:30:26</div>
+																			</div>
+																			<p class="order_brand">求购品牌：<span>马自达cx-4</span></p>
+																			<p class="order_price">预算：<span>10-15万</span></p>
+																	</div>
+																	<!-- <div class="my_infor_details_icon"></div> -->
+															</div>
+													</li>
+											</ul>
+									</div>
+								</div>
+								<div class="my_infor_item my_infor_new_car">
+									<div class="my_infor_item_inner">
+											<div class="my_infor_bg"></div>
+											<h2 class="my_infor_tit">新车车订单</h2>
+											<div class="icon_arrow_right"></div>
+									</div>
+									<!-- 新车订单详情 -->
+									<div class="my_infor_details my_infor_used_car_details box_s">
+											<div class="my_infor_details_header common_head">
+													<a href="javascript:;" class="head_return icon-angle-left my_infor_details_return"></a>
+													<div class="head_content">新车订单</div>
+											</div>
+											<ul class="my_infor_details_list">
+													<li class="my_infor_details_item">
+															<div class="my_infor_details_nub flex">订单编号：<span>40</span></div>
+															<div class="my_infor_details_content flex">
+																	<div class="my_infor_details_bg_line"></div>
+																	<div class="my_infor_order_details">
+																			<div class="new_car_order_tit clearfix">
+																				<p class="fl">求购品牌：</p><h2 class="fl">轩逸 2016款 1.6XL CVT豪华型</h2>
+																			</div>
+																			<p class="order_name">买家姓名：<span>张三</span></p>
+																			<p class="order_time">日期：<span>2017-8-6 14:30:26</span></p>
+																	</div>
+																	<!-- <div class="my_infor_details_icon"></div> -->
+															</div>
+													</li>
+											</ul>
+									</div>
+								</div>
+						</div>
+						<div class="my_infor_unit">
+								<div class="my_infor_item my_infor_finance">
+									<div class="my_infor_item_inner">
+											<div class="my_infor_bg"></div>
+											<h2 class="my_infor_tit">金服订单</h2>
+											<div class="icon_arrow_right"></div>
+									</div>
+									<!-- 金服订单详情 -->
+									<div class="my_infor_details my_infor_used_car_details box_s">
+											<div class="my_infor_details_header common_head">
+													<a href="javascript:;" class="head_return icon-angle-left my_infor_details_return"></a>
+													<div class="head_content">倍儿牛金服</div>
+											</div>
+											<ul class="my_infor_details_list">
+													<li class="my_infor_details_item">
+															<div class="my_infor_details_nub flex">订单编号：<span>45</div>
+															<div class="my_infor_details_content flex">
+																	<div class="my_infor_details_bg_line bg_green"></div>
+																	<div class="my_infor_order_details">
+																			<div class="order_head flex">
+																				<p class="order_name">客户姓名：<span>张三</span></p>
+																			</div>
+																			<div class="finance_order_desc flex">
+																					<p>申请金额：<span>5.00万</span></p>
+																					<p>申请周期：<span>12个月</span></p>
+																			</div>
+																			<div class="order_time">2017-8-6 14:30:26</div>
+																	</div>
+																	<!-- <div class="my_infor_details_icon"></div> -->
+															</div>
+													</li>
+											</ul>
+									</div>
+								</div>
+								<div class="my_infor_item my_infor_shop">
+									<div class="my_infor_item_inner">
+											<div class="my_infor_bg"></div>
+											<h2 class="my_infor_tit">商城订单</h2>
+											<div class="icon_arrow_right"></div>
+									</div>
+									<!-- 购物订单详情 -->
+									<div class="my_infor_details my_infor_used_car_details box_s">
+											<div class="my_infor_details_header common_head">
+													<a href="javascript:;" class="head_return icon-angle-left my_infor_details_return"></a>
+													<div class="head_content">我的订单</div>
+											</div>
+											<ul class="my_order_list">
+												<li class="my_order_item">
+															<div class="my_order_nub">
+																 <p>订单编号：<span>18888</span></p>
+																 <button class="cancel_order">取消订单</button>
+															</div>
+															<div class="_order_inform my_order_inform">
+																	<div class="goods_s_img">
+																			<img src="./images/test/details_slide_1.png" alt="">
+																	</div>
+																	<div class="goods_desc">
+																			<h3>苏吝府泰国茉莉香米 原装进口泰国大米包邮新米10kg</h3>
+																	</div>
+																	<div class="loading_pay box_s">
+																			待付款
+																	</div>
+															</div>
+															<div class="loading_pay_func">
+																	<p>应付款：<span>¥108.00</span></p>
+																	<a href="">付款</a>
+															</div>
+												</li>
+												<li class="my_order_item">
+						                <div class="my_order_nub">
+						                   <p>订单编号：<span>18889</span></p>
+						                </div>
+						                <div class="_order_inform my_order_inform">
+						                    <div class="goods_s_img">
+						                        <img src="./images/test/details_slide_1.png" alt="">
+						                    </div>
+						                    <div class="goods_desc">
+						                        <h3>苏吝府泰国茉莉香米 原装进口泰国大米包邮新米10kg</h3>
+						                    </div>
+						                    <div class="already_pay box_s">
+						                        <img src="./images/icon/already_pay.png" alt="">
+						                    </div>
+						                </div>
+						            </li>
+											</ul>
+									</div>
+								</div>
+						</div>
+						<div class="my_infor_unit">
+								<div class="my_infor_item my_infor_account">
+									<div class="my_infor_item_inner">
+											<div class="my_infor_bg"></div>
+											<h2 class="my_infor_tit">账户余额</h2>
+											<div class="icon_arrow_right"></div>
+									</div>
+									<!-- 账单详情 -->
+									<div class="my_infor_details my_infor_used_car_details box_s">
+											<div class="my_infor_details_header common_head">
+													<a href="javascript:;" class="head_return icon-angle-left my_infor_details_return"></a>
+													<div class="head_content">账单</div>
+											</div>
+											<div class="bill_con flex">
+													<div class="bill_icon"></div>
+													<div class="bill_text">账户余额</div>
+													<p class="bill_money"><span>0.00</span>元</p>
+											</div>
+									</div>
+								</div>
+						</div>
+				</div>
+				<div class="my_account_exit">
+						<a href="">退出登录</a>
+				</div>
+		</section>
+    <section class="home_foot_btn">
+				<ul class="home_foot_btn_list clearfix">
+					<li class="home_foot_btn_item home_foot_btn_left fl">
+							<a href="">
+								<div class="icon"></div>
+								<p>首页</p>
+							</a>
+					</li>
+					<li class="home_foot_btn_item home_foot_btn_right current fl">
+							<a href="">
+								<div class="icon"></div>
+								<p>我的</p>
+							</a>
+					</li>
+				</ul>
+		</section>
+		<div class="tip_mask" style="display: none;"></div>
+		<div class="tip_box " style="display: none;">
+        <div class="tip_box_img">
+            <img src="./images/icon/tip_box_img.png" alt="">
+        </div>
+        <p class="tip_box_txt">确定取消购物订单？</p>
+        <a href="" class="tip_box_btn box_s">确定</a>
+        <a href="javascript:;" class="tip_box_btn return box_s">取消</a>
+    </div>
+</body>
+</html>

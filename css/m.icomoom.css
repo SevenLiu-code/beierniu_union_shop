@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?j97goc');
+  src:  url('fonts/icomoon.eot?j97goc#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?j97goc') format('truetype'),
+    url('fonts/icomoon.woff?j97goc') format('woff'),
+    url('fonts/icomoon.svg?j97goc#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check:before {
+  content: "\e904";
+}
+.icon-x2:before {
+  content: "\e902";
+}
+.icon-arrow-circle-right:before {
+  content: "\f0a9";
+}
+.icon-angle-double-right:before {
+  content: "\f101";
+}
+.icon-angle-left:before {
+  content: "\f104";
+}
+.icon-angle-right:before {
+  content: "\f105";
+}
+.icon-angle-up:before {
+  content: "\f106";
+}
+.icon-angle-down:before {
+  content: "\f107";
+}
+.icon-arrow-right-alt2:before {
+  content: "\e901";
+}
+.icon-arrow-right:before {
+  content: "\f03e";
+}
+.icon-arrow-small-right:before {
+  content: "\f071";
+}
+.icon-arrow-up:before {
+  content: "\f03d";
+}
+.icon-chevron-left:before {
+  content: "\f0a4";
+}
+.icon-chevron-right:before {
+  content: "\f078";
+}
+.icon-location:before {
+  content: "\f060";
+}
+.icon-search2:before {
+  content: "\f02e";
+}
+.icon-triangle-down:before {
+  content: "\f05b";
+}
+.icon-triangle-up:before {
+  content: "\f0aa";
+}
+.icon-x:before {
+  content: "\f081";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-user:before {
+  content: "\e971";
+}
+.icon-users:before {
+  content: "\e972";
+}
+.icon-spinner11:before {
+  content: "\e984";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-checkmark:before {
+  content: "\e903";
+}
+.icon-phone2:before {
+  content: "\e900";
+}

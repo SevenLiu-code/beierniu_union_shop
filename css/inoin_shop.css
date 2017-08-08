@@ -1,0 +1,113 @@
+html, body { background-color: #ececec; height: 100%; }
+/*首页*/
+.home_slide { position: relative; }
+.home_slide ul>li { font-size: 0; }
+.home_slide ul>li>img { width: 100%; }
+div.home_slide_control span.swiper-pagination-bullet { background-color: #fff; opacity: .5;}
+div.home_slide_control span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #000; }
+
+ul.home_four_moudle_list { background-color: #fff; }
+ul.home_four_moudle_list>li{ width: 50%; position: relative; }
+ul.home_four_moudle_list>li>a { position: absolute; top: 0; bottom: 0;
+    left: 0; right: 0; margin: auto; width: 3.47rem;
+    height: 2.53rem; padding: .53rem 0; }
+li.home_four_moudle_item_one { border-right: .03rem solid #f2f2f2;
+                               border-bottom: .03rem solid #f2f2f2; }
+li.home_four_moudle_item_two { border-left: .03rem solid #f2f2f2;
+                          border-bottom: .03rem solid #f2f2f2; }
+li.home_four_moudle_item_three { border-right: .03rem solid #f2f2f2;
+                             border-top: .03rem solid #f2f2f2; }
+li.home_four_moudle_item_four { border-left: .03rem solid #f2f2f2;
+                    border-top: .03rem solid #f2f2f2; }
+ul.home_four_moudle_list>li>a { display: block; }
+li.home_four_moudle_item>a>img { display: block; width: 1.87rem; height: 1.87rem;
+    margin: auto; }
+li.home_four_moudle_item>a>p { margin-top: .2rem; text-align: center;
+    color: #3d3b39; font-size: .21rem; }
+
+section.home_foot_btn { position: fixed; bottom: 0; left: 0; right: 0;
+          padding: .2rem 0; border-top: .04rem solid #f2f2f2; z-index: 9;
+          background-color: #fff; }
+li.home_foot_btn_item { width: 50%; text-align: center; color: #464a4d; }
+li.home_foot_btn_item>a { display: block; }
+li.home_foot_btn_item>a>div.icon { width: .59rem; height: .59rem; margin: 0 auto; }
+li.home_foot_btn_left>a>div.icon {
+            background: url(../images/icon/icon_home_normal.png) no-repeat;
+            background-size: 100%;  }
+li.home_foot_btn_right>a>div.icon {
+            background: url(../images/icon/icon_profile_normal.png) no-repeat;
+            background-size: 100%;  }
+li.home_foot_btn_item>a>p { margin-top: .13rem; color: #464a4d; font-size: .24rem; }
+li.home_foot_btn_item.current>a>p { color: #e22323; }
+li.home_foot_btn_left.current>a>div.icon {
+            background: url(../images/icon/icon_home_focus.png) no-repeat;
+            background-size: 100%;
+  }
+li.home_foot_btn_right.current>a>div.icon {
+              background: url(../images/icon/icon_profile_focus.png) no-repeat;
+              background-size: 100%;
+    }
+
+/*个人中心页 */
+div.my_infor_inner { padding: .27rem 0; background-color: #ececec; }
+div.my_infor_unit { padding: .27rem 0 ;  }
+div.my_infor_item { background-color: #fff;
+  border-bottom: 1px solid #ececec; }
+div.my_infor_unit div.my_infor_item:last-child { border-bottom: none; }
+div.my_infor_item_inner { padding: .4rem .8rem .4rem .5rem; display: flex; display: -webkit-flex;
+        align-items: center; justify-content: space-between; }
+div.my_infor_bg { width: .8rem; height: .8rem; }
+h2.my_infor_tit { width: 76%; font-size: .4rem; }
+div.my_infor_used_car div.my_infor_bg { background: url(../images/icon/icon_usercar_order.png) no-repeat;
+        background-size: 100%;  }
+.icon_arrow_right { width: .31rem; height: .53rem;
+     background: url(../images/icon/my_infor_icon.png) no-repeat;
+     background-size: 100%; }
+div.my_infor_new_car div.my_infor_bg { background: url(../images/icon/icon_newcar_order.png) no-repeat;
+        background-size: 100%; }
+div.my_infor_finance div.my_infor_bg { background: url(../images/icon/icon_loan_order.png) no-repeat;
+        background-size: 100%; }
+div.my_infor_shop div.my_infor_bg { background: url(../images/icon/icon_shopping_order.png) no-repeat;
+        background-size: 100%; }
+div.my_infor_account div.my_infor_bg { background: url(../images/icon/bat_performance.png) no-repeat;
+        background-size: 100%; }
+div.my_account_exit { padding: .27rem 0; background-color: #fff; }
+div.my_account_exit>a { display: block; font-size: .43rem;
+  text-align: center; color: #ea4936; }
+
+/*个人中心订单详情  */
+ul.my_infor_details_list { padding: .67rem 0; }
+div.my_infor_details { width: 100%; position: fixed; top: 0;  right: -100%;
+   min-height: 100%; padding-bottom: 1.6rem; background-color: #ececec;
+   transition: all .36s;  -moz-transition: all .36s;
+   -webkit-transition: all .36s;  -o-transition: all .36s; }
+li.my_infor_details_item {border-bottom: .03rem solid #dcdcdc; background-color: #fff; }
+ul.my_infor_details_list li.my_infor_details_item:last-child { border-bottom: none; }
+div.my_infor_details_header { background-color: #ea4936;}
+div.my_infor_details_nub { margin: 0 .3rem; padding: .27rem .2rem; font-size: .36rem;
+      border-bottom: 1px solid #ececec; color: #757575; }
+div.my_infor_details_content { align-items: center; padding: .3rem .5rem; }
+div.my_infor_details_bg { width: 1.8rem; height: 1.8rem;
+      background: url(../images/icon/icon_default_avatar.png) no-repeat;
+      background-size: 100%; }
+div.my_infor_order_details { width: 100%; padding-left: .32rem; line-height: .6rem;
+      color: #4c5053; font-size: .32rem; }
+div.order_head .order_time { margin-left: 1.2rem;
+   color: #757575; font-size: .26rem; }
+div.new_car_order_tit { font-size: .4rem; color: #3d3b39; }
+div.new_car_order_tit h2 { width: 76%; font-size: .4rem; color: #3d3b39;  }
+div.my_infor_details_bg_line { width: .13rem; height: 2rem;
+      margin-right: .16rem; background-color: #f0c50f;}
+div.my_infor_details_bg_line.bg_green { background-color: #5cbe1b; }
+div.finance_order_desc>p { margin-right: .4rem; }
+div.finance_order_desc>p>span { color: #ea4935; }
+/*账单*/
+div.bill_con { align-items: center; justify-content: space-between;
+  padding: .27rem .4rem; background-color: #fff; }
+div.bill_icon { width: .85rem; height: .85rem;
+      background: url( ../images/icon/icon_balance_of_account.png) no-repeat;
+      background-size: 100%; }
+div.bill_text { width: 65%; font-size: .37rem; color: #4c5053; }
+p.bill_money {  font-size: .37rem; font-weight: bold;
+   color: #ea4935;}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>倍儿牛商城</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./css/m.reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/m.icomoom.css">
+    <link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/m.common.css">
+    <link rel="stylesheet" type="text/css" href="./css/m.details.css">
+    <link rel="stylesheet" type="text/css" href="./css/LArea.css">
+    <script type="text/javascript">
+        !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+    </script>
+    <script type="text/javascript" src="./js/zepto.min.js"></script>
+    <script type="text/javascript" src="./js/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="./js/LAreaData1.js"></script>
+    <script type="text/javascript" src="./js/LArea.js"></script>
+    <script type="text/javascript" src="./js/m.runing.js"></script>
+    <script type="text/javascript" src="./js/m.touch.js"></script>
+
+</head>
+<body>
+    <!-- 头部返回 -->
+    <header class="common_head part_hidde">
+        <a href="javascript:history.go(-1);" class="link_referrer head_return icon-angle-left"></a>
+        <div class="head_content">
+            新建收件地址
+        </div>
+    </header>
+    <section class="creat_contact_info common_section">
+        <form action="" method="post" onsubmit="return creat_address();">
+            <ul class="creat_contact_info_list common_list">
+                <li class="creat_user">
+                    <input type="text" name="name" value="" placeholder="请填入收件人姓名">
+                </li>
+                <li class="creat_tel">
+                    <input type="tel" name="mobile" value="" maxlength="11" placeholder="请填入收件人手机号码">
+                </li>
+                <li class="creat_address">
+                    <input type="text" id="manage_addr" readonly="readonly" name="area" placeholder="请选择省市区域">
+                    <input id="value1" type="hidden" value="20,234,504">
+                </li>
+                <li class="creat_address_details">
+                    <input type="text" name="address_details" value="" placeholder="请填入收件人详细地址">
+                </li>
+            </ul>
+            <div class="creat_contact_info_btn common_btm">
+                <button type="submit">提交</button>
+            </div>
+        </form>
+    </section>
+    <div class="tip_mask"></div>
+    <div class="tip_box">
+        <div class="tip_box_img">
+            <img src="./images/icon/tip_box_img.png" alt="">
+        </div>
+        <p class="tip_box_txt"></p>
+        <a href="javascript:;" class="tip_box_btn return box_s">返回</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>二手车买卖</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="./css/m.reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/m.style.css">
+	<link rel="stylesheet" type="text/css" href="./css/m.syn.css">
+	<link rel="stylesheet" type="text/css" href="./css/m.filter_car.css">
+	<link rel="stylesheet" type="text/css" href="./css/LCalendar.min.css">
+	<script type="text/javascript">
+			!function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+	</script>
+	<script type="text/javascript" src="./js/zepto.min.js"></script>
+	<script type="text/javascript" src="./js/LCalendar.min.js"></script>
+	<script type="text/javascript" src="./js/m.runing.js"></script>
+	<script type="text/javascript" src="./js/m.touch_2.js"></script>
+</head>
+<body>
+	<header class="return_header cover_head coopera_header hidden_part">
+		<a href="./m.home.html" class="return_iocn icon-angle-left"></a>
+		<p><i class="return_header_icon"></i>二手车买卖</p>
+	</header>
+	<section class="buy_sell_bg common_banner hidden_part">
+		<img src="./images/banner/coopera.jpg" alt="">
+	</section>
+	<div class="click_mask"></div>
+	<section class="buy_sell_con form_con hidden_part">
+		<div class="buy_sell_inner form_con_inner">
+			<div class="buy_sell_form_con form_input_con">
+				<ul class="buy_sell_tit">
+					<li>
+						<a href="javascript:;" class="current">录入买家</a>
+					</li>
+					<li>
+						<a href="javascript:;">录入车源</a>
+					</li>
+				</ul>
+				<div class="form_inner_con">
+					<!-- 录入买家 -->
+					<div class="form_box buy_car_form">
+						<div class="form_row input_full box_s">
+							<input class="name_input" type="text" name="userName" placeholder="请输入买家姓名" maxlength="18">
+							<i class="must_icon"></i>
+							<p class="error_text name_error_text"></p>
+						</div>
+						<div class="form_row input_full box_s">
+							<input class="phone_input" type="tel" name="phone" placeholder="请输入手机号码" maxlength="11">
+							<i class="must_icon"></i>
+							<p class="error_text phone_error_text"></p>
+						</div>
+						<div class="form_row input_full box_s">
+							<input class="budget_price fake_input" data="none" readonly="readonly">
+								<i class="must_icon"></i>
+							</input>
+							<i class="triangle_iocn select_triangle"></i>
+							<select class="budget_price_select" name="budget_price">
+								<option value="none">请选择预算价格</option>
+								<option value="no-limit ">不限</option>
+								<option value="0-5">0-5万</option>
+								<option value="5-10">5-10万</option>
+								<option value="10-15">10-15万</option>
+								<option value="15-20">15-20万</option>
+								<option value="20-25">20-25万</option>
+								<option value="25-30">25-30万</option>
+								<option value="30-35">30-35万</option>
+								<option value="35-40">35-40万</option>
+								<option value="40-45">40-45万</option>
+								<option value="45-50">45-50万</option>
+								<option value="50+">50万以上</option>
+							</select>
+							<p class="error_text price_error_text"></p>
+						</div>
+						<div class="form_row input_full box_s">
+							<input class="brank_select brank_select_set_off fake_input" data="none" readonly="readonly" placeholder="点击选择品牌车型" value="">
+							</input>
+						</div>
+						<div class="form_row commit_box">
+							<button class="buy_car_commit form_commit">提交</button>
+						</div>
+					</div>
+					<!-- 录入车源 -->
+					<div class="form_box sell_car_form">
+						<div class="form_row input_full">
+							<input class="name_input" type="text" name="userName" placeholder="请输入车主姓名">
+							<i class="must_icon"></i>
+							<p class="error_text name_error_text"></p>
+						</div>
+						<div class="form_row input_full">
+							<input class="phone_input" type="tel" name="phone" placeholder="请输入手机号码" maxlength="11">
+							<i class="must_icon"></i>
+							<p class="error_text phone_error_text"></p>
+						</div>
+						<div class="form_row input_full">
+							<input class="brand_select brank_select_set fake_input" data="none" placeholder="点击选择品牌车型" value="" readonly="readonly">
+							</input>
+							<i class="must_icon"></i>
+							<p class="error_text brand_error_text"></p>
+						</div>
+						<div class="form_row input_full">
+							<input class="time_input" id="picktime" type="text" name="time" placeholder="请选择上牌时间" value="" readonly="readonly">
+							<i class="must_icon"></i>
+							<p class="error_text time_error_text"></p>
+						</div>
+						<div class="form_row input_full">
+							<input class="mileage_input" type="tel" name="mileage" placeholder="请输入表显里程" maxlength="5">
+							<p class="error_text mileage_error_text"></p>
+							<i class="must_icon"></i>
+							<span class="wan">万公里</span>
+						</div>
+						<div class="form_row commit_box">
+							<button class="sell_car_commit form_commit">提交</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ask_box_success">
+				<img src="./images/base/ask_success.png" alt="">
+				<p>信息提交成功</p>
+				<div class="_success_desc">稍后会有专业客服与您联系，请保持电话畅通</div>
+				<div class="return_link">
+				 	<a href="javascript:;" class="return">返回</a>
+			 	</div>
+			</div>
+		</div>
+	</section>
+	<!-- 选择品牌 -->
+	<section class="car_brank">
+		<div class="filter_head cover_head">
+			<a href="javascript:void(0);" class="icon-angle-left"></a>
+			<p>选择品牌</p>
+		</div>
+		<div class="filter_brand">
+			<dl class="filter_details_kind filter_details_brand">
+	            <dt class="filter_details_tit hot_brand_tit">热门品牌</dt>
+	            <dd>
+	                <ul class="h_menu_brand h_menu_main">
+	                    <li class="h_menu_item find_set">
+	                        <a href="javascript:void(0);" class="dazhong" data-brand="">
+	                            <i></i>大众
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item find_set">
+	                        <a href="javascript:void(0);" class="buick" data-brand="">
+	                            <i></i>别克
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item find_set">
+	                        <a href="javascript:void(0);" class="richan" data-brand="">
+	                            <i></i>日产
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item find_set">
+	                        <a href="javascript:void(0);" class="honda" data-brand="">
+	                            <i></i>本田
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item find_set">
+	                        <a href="javascript:void(0);" class="xfl" data-brand="">
+	                            <i></i>雪佛兰
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item find_set">
+	                        <a href="javascript:void(0);" class="bmw" data-brand="">
+	                            <i></i>宝马
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item find_set">
+	                        <a href="javascript:void(0);" class="benz" data-brand="">
+	                            <i></i>奔驰
+	                        </a>
+	                    </li>
+	                    <li class="h_menu_item find_set">
+	                        <a href="javascript:void(0);" class="ford" data-brand="">
+	                            <i></i>福特
+	                        </a>
+	                    </li>
+	                </ul>
+	            </dd>
+	        </dl>
+	        <dl class="filter_details_kind filter_details_brand no_filter_dl">
+	            <dt class="filter_details_tit">*</dt>
+	            <dd class="brand_details_dd">
+	                <a href="javascript:void(0);" class="no_brand">不限品牌</a>
+	            </dd>
+       	 	</dl>
+       	 	<dl class="filter_details_kind filter_details_brand">
+                <dt class="filter_details_tit" data-index="A">A</dt>
+                <dd class="brand_details_dd">
+                    <ul>
+                         <li class="brand_details_item find_set">
+                            <a href="javascript:void(0);" data-brand="">阿尔法·罗密欧</a>
+                         </li>
+                         <li class="brand_details_item find_set">
+                          	<a href="javascript:void(0);" data-brand="">阿斯顿·马丁</a>
+                         </li>
+                           <li class="brand_details_item find_set">
+                           <a href="javascript:void(0);" data-brand="">安凯客车</a>
+                         </li>
+                         <li class="brand_details_item find_set">
+                           <a href="javascript:void(0);" data-brand="">奥迪</a>
+                         </li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="filter_details_kind filter_details_brand">
+                <dt class="filter_details_tit" data-index="A">B</dt>
+                <dd class="brand_details_dd">
+                    <ul>
+                         <li class="brand_details_item find_set">
+                            <a href="javascript:void(0);" data-brand="">阿尔法·罗密欧</a>
+                         </li>
+                         <li class="brand_details_item find_set">
+                          	<a href="javascript:void(0);" data-brand="">阿斯顿·马丁</a>
+                         </li>
+                           <li class="brand_details_item find_set">
+                           <a href="javascript:void(0);" data-brand="">安凯客车</a>
+                         </li>
+                         <li class="brand_details_item find_set">
+                           <a href="javascript:void(0);" data-brand="">奥迪</a>
+                         </li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="filter_details_kind filter_details_brand">
+                <dt class="filter_details_tit" data-index="A">A</dt>
+                <dd class="brand_details_dd">
+                    <ul>
+                         <li class="brand_details_item find_set">
+                            <a href="javascript:void(0);" data-brand="">阿尔法·罗密欧</a>
+                         </li>
+                         <li class="brand_details_item find_set">
+                          	<a href="javascript:void(0);" data-brand="">阿斯顿·马丁</a>
+                         </li>
+                           <li class="brand_details_item find_set">
+                           <a href="javascript:void(0);" data-brand="">安凯客车</a>
+                         </li>
+                         <li class="brand_details_item find_set">
+                           <a href="javascript:void(0);" data-brand="">奥迪</a>
+                         </li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="filter_details_kind filter_details_brand">
+                <dt class="filter_details_tit" data-index="A">B</dt>
+                <dd class="brand_details_dd">
+                    <ul>
+                         <li class="brand_details_item find_set">
+                            <a href="javascript:void(0);" data-brand="">阿尔法·罗密欧</a>
+                         </li>
+                         <li class="brand_details_item find_set">
+                          	<a href="javascript:void(0);" data-brand="">阿斯顿·马丁</a>
+                         </li>
+                           <li class="brand_details_item find_set">
+                           <a href="javascript:void(0);" data-brand="">安凯客车</a>
+                         </li>
+                         <li class="brand_details_item find_set">
+                           <a href="javascript:void(0);" data-brand="">奥迪</a>
+                         </li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+		<aside class="aside_letter">
+			<ul class="letter_list">
+				<li class="letter_item">热</li>
+				<li class="letter_item">*</li>
+				<li class="letter_item">A</li>
+				<li class="letter_item">B</li>
+			</ul>
+		</aside>
+	</section>
+	<!-- 选择车系 -->
+	<section class="brank_set">
+		<div class="filter_head cover_head">
+			<a href="javascript:void(0);" class="icon-angle-left"></a>
+			<p>选择车系</p>
+		</div>
+		<div class="filter_brand">
+			<h2 class="current_brand">奥迪</h2>
+			<dl class="filter_details_kind filter_details_brand no_filter_dl">
+	            <dt class="filter_details_tit">*</dt>
+	            <dd class="brand_details_dd">
+	                <a href="javascript:void(0);">不限车系</a>
+	            </dd>
+       	 	</dl>
+			<dl class="filter_details_kind filter_details_brand">
+                <dt class="filter_details_tit set_kind">一汽-大众奥迪</dt>
+                <dd class="brand_details_dd">
+                    <ul>
+                         <li class="brand_details_item">
+                            <a href="javascript:void(0);" data="">奥迪A3</a>
+                         </li>
+                         <li class="brand_details_item">
+                          	<a href="javascript:void(0);">奥迪A4L</a>
+                         </li>
+                           <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪A6L</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪Q3</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪Q5</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪A4</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪A6</a>
+                         </li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="filter_details_kind filter_details_brand">
+                <dt class="filter_details_tit set_kind">奥迪（进口）</dt>
+                <dd class="brand_details_dd">
+                    <ul>
+                         <li class="brand_details_item">
+                            <a href="javascript:void(0);">奥迪A1</a>
+                         </li>
+                         <li class="brand_details_item">
+                          	<a href="javascript:void(0);">奥迪A3（进口）</a>
+                         </li>
+                           <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪A3（进口）新能源</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪A4（进口）</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪A5</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪A6（进口）</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪A7</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪A8</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪Q3</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪Q5</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪Q7</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪R8</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪S3</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪S6</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);">奥迪S8</a>
+                         </li>
+                    </ul>
+                </dd>
+            </dl>
+		</div>
+	</section>
+	<!-- 选择哪一款 -->
+	<section class="car_set_detail">
+		<div class="filter_head cover_head">
+			<a href="javascript:void(0);" class="icon-angle-left"></a>
+			<p>选择款式</p>
+		</div>
+		<div class="filter_brand">
+			<h2 class="_set_detail">奥迪A3</h2>
+			<dl class="filter_details_kind filter_details_brand">
+                <dt class="filter_details_tit set_detail_yeas">2015款</dt>
+                <dd class="brand_details_dd">
+                    <ul>
+                         <li class="brand_details_item">
+                            <a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版手动进取版手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                          	<a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                           <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2015款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl class="filter_details_kind filter_details_brand">
+                <dt class="filter_details_tit set_kind">2016款</dt>
+                <dd class="brand_details_dd">
+                    <ul>
+                         <li class="brand_details_item">
+                            <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                          	<a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                           <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                         <li class="brand_details_item">
+                           <a href="javascript:void(0);" class="set_dateil_tit">2016款 奥迪A3 Sportback 35 TFSI 手动进取版</a>
+                         </li>
+                    </ul>
+                </dd>
+            </dl>
+		</div>
+	</section>
+</body>
+</html>
