@@ -282,7 +282,7 @@ div.already_pay>img { display: block; width: 0.9333rem;
 div.tip_mask { position: fixed; top: 0; bottom: 0; left: 0; right: 0;
 	background-color: #000; opacity: .4; display: none; z-index: 4; }
 div.tip_box { position: fixed; top: 0; left: 0; right: 0;
-	width: 75%; margin: 50% auto 0 auto; background-color: #fff;
+	width: 75%; margin: 35% auto 0 auto; background-color: #fff;
 	border-radius: 0.2667rem; display: none; z-index: 5; overflow: hidden; }
 div.tip_box_img { width: 2.4533rem; margin: 0 auto;
 	padding: 1.2rem 0 0.8rem 0;  }

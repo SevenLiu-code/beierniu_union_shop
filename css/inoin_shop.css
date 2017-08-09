@@ -38,7 +38,7 @@ li.home_foot_btn_left>a>div.icon {
 li.home_foot_btn_right>a>div.icon {
             background: url(../images/icon/icon_profile_normal.png) no-repeat;
             background-size: 100%;  }
-li.home_foot_btn_item>a>p { margin-top: .13rem; color: #464a4d; font-size: .24rem; }
+li.home_foot_btn_item>a>p { margin-top: .13rem; color: #464a4d; font-size: .3rem; }
 li.home_foot_btn_item.current>a>p { color: #e22323; }
 li.home_foot_btn_left.current>a>div.icon {
             background: url(../images/icon/icon_home_focus.png) no-repeat;
@@ -104,7 +104,7 @@ div.finance_order_desc>p { margin-right: .4rem; }
 div.finance_order_desc>p>span { color: #ea4935; }
 /*账单*/
 div.bill_con { align-items: center; justify-content: space-between;
-  padding: .27rem .4rem; background-color: #fff; }
+  padding: .27rem .5rem; background-color: #fff; }
 div.bill_icon { width: .85rem; height: .85rem;
       background: url( ../images/icon/icon_balance_of_account.png) no-repeat;
       background-size: 100%; }
